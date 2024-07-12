@@ -26,8 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1',
-    '192.168.1.2',  # Ensure this is your current local IP address
+    '13.60.46.75',  # Ensure this is your current local IP address
 ]
 
 
