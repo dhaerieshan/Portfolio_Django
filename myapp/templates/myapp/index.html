@@ -1,0 +1,774 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dhaerieshan Portfolio</title>
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <div class="animated-background"></div>
+    <div id="particles-js"></div>
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{% static 'assets/imgs/logo.svg' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of page navigation -->
+
+    <!-- Page Header -->
+    <header class="header" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+                    <div class="infos">
+                        <h6 class="subtitle">hello, I'm</h6>
+                        <h6 class="title">Dhaerieshan&nbsp;M</h6>
+                        <p>Associate&nbsp;Software&nbsp;Engineer</p>
+
+                        <div class="buttons pt-3">
+                            <a class="btn btn-primary rounded" href="#contact">HIRE ME</a>
+                            <a class="btn btn-dark rounded" href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}"
+                                download="Resume.pdf">DOWNLOAD&nbsp;RESUME</a>
+                        </div>
+
+                        <div class="socials mt-4">
+                            <a class="social-item" href="https://linkedin.com/in/dhaerie-shan-38939a187"><i
+                                    class="ti-linkedin"></i></a>
+                            <a class="social-item" href="https://github.com/dhaerieshan" target="_blank"><i
+                                    class="ti-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="img-holder">
+                         <img src="{% static 'assets/css/style.css' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down-arrow">
+            <div class="arrow"></div>
+        </div>
+
+        <!-- Header-widget -->
+        <div class="widget">
+            <div class="widget-item">
+                <h2>12</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="widget-item">
+                <h2>73</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="widget-item">
+                <h2>6</h2>
+                <p>Certifications</p>
+            </div>
+        </div>
+        <!-- Scroll Down Arrow -->
+        <div class="scroll-down-arrow">
+            <div class="arrow"></div>
+        </div>
+    </header>
+    <!-- End of Page Header -->
+
+    <!-- About section -->
+    <section id="about" class="section mt-3">
+        <div class="container mt-5">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3">
+                    <img src="{% static 'assets/imgs/profile.jpeg' %}" alt="" class="img-thumbnail mb-4">
+                </div>
+                <div class="pl-md-4 col-md-9">
+                    <h6 class="title">Dhaerieshan M</h6>
+                    <p class="subtitle">Associate Software Engineer</p>
+                    <p>I offer AI and ML solutions with Python, leveraging advanced algorithms to create efficient and
+                        innovative solutions tailored to meet your specific needs. My expertise includes developing
+                        predictive models, automating processes, and enhancing business intelligence through data-driven
+                        insights. For educational details and experience, you can download my resume.</p>
+                    <a class="btn btn-primary rounded mt-3"
+                        href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}" download="Resume.pdf">DOWNLOAD
+                        RESUME</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+    <!-- Service section -->
+    <section id="service" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Service</h6>
+            <h6 class="section-title mb-4">What I Do</h6>
+            <p class="mb-5 pb-4">I specialize in providing cutting-edge AI and ML solutions using Python. Here are some of the services I offer:</p>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link" data-target="#contact">
+                        <div class="card-body">
+                            <i class="icon ti-crown"></i>
+                            <h5>AI Model Development</h5>
+                            <p>Building and deploying AI models to solve complex problems and automate tasks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link" data-target="#contact">
+                        <div class="card-body">
+                            <i class="icon ti-desktop"></i>
+                            <h5>Machine Learning Solutions</h5>
+                            <p>Creating predictive models and machine learning algorithms to enhance decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link" data-target="#contact">
+                        <div class="card-body">
+                            <i class="icon ti-mobile"></i>
+                            <h5>Data Analysis</h5>
+                            <p>Providing insightful data analysis to help businesses gain valuable insights from their data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link" data-target="#contact">
+                        <div class="card-body">
+                            <i class="icon ti-bar-chart"></i>
+                            <h5>Consulting</h5>
+                            <p>Offering expert advice and consultation on AI and ML projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Service Section -->
+
+    <!-- Skills section -->
+    <section class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Skills</h6>
+            <h6 class="section-title mb-4">Why Choose me</h6>
+            <p class="mb-5 pb-4">With a strong background in AI and ML, I bring a wealth of knowledge and skills to your
+                projects. Here are some key areas of my expertise:</p>
+            <div class="row text-left">
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Python Programming and Libraries</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Python Programming</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 82%;" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Numpy</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Machine Learning and Data Analysis</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">AI Model Development</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Random Forest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Deep Learning Frameworks</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Keras</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Web Development Frameworks</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 81%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Django</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Flask</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Generative AI</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 94%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">GPT-4</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 82%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Llama 3</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 91%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Mistral</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Skills Section -->
+
+    <!-- Portfolio section -->
+    <section id="portfolio" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Portfolio</h6>
+            <h6 class="section-title mb-4">Check My Wonderful Works</h6>
+            <p class="mb-5 pb-4">Here are some of the projects I've worked on:</p>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Gen AI-based AI Interviewer</h5>
+                        <img src="{% static 'assets/imgs/gen-ai-interviewer.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>AI interviewer using generative AI.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="1" data-description="
+                                <h5>Gen AI-based AI Interviewer</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>To develop an AI interviewer using generative AI techniques to conduct and assess interviews.</ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Generative AI</li>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Python</li>
+                                        <li>Machine Learning</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Automates the interview process by asking questions and assessing responses.</li>
+                                        <li>Uses generative AI to create and customize interview questions.</li>
+                                        <li>Provides feedback and scores based on the interviewee’s responses.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Efficient and unbiased interview process.</li>
+                                        <li>Saves time for HR professionals by automating initial interview rounds.</li>
+                                        <li>Provides consistent and fair evaluation criteria.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Ai_mock_interviewer" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Customer Care Call Summary Alert</h5>
+                        <img src="{% static 'assets/imgs/customer-care-call-summary.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Summarize customer care calls and provide alerts.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="2" data-description="
+                                <h5>Customer Care Call Summary Alert</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>
+                                        To develop a system that summarizes customer care calls and provides alerts using natural language processing and machine learning.
+                                    </ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Machine Learning</li>
+                                        <li>Python</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Captures user input and creates embeddings for analysis.</li>
+                                        <li>Uses Pinecone for storing and retrieving embeddings.</li>
+                                        <li>Classifies customer care calls into relevant categories.</li>
+                                        <li>Summarizes the content of the calls and provides alerts.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Streamlined customer care process with quick summaries.</li>
+                                        <li>Improved customer service by prioritizing urgent issues.</li>
+                                        <li>Efficient management of large volumes of customer care calls.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Customer_Care_Call_Summarizer_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Support Chat Bot for Your Website</h5>
+                        <img src="{% static 'assets/imgs/support-chat-bot.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Provide support on websites.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="5" data-description="
+                                <h5>Support Chat Bot for Your Website</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>
+                                        To create a chatbot that provides support on websites, leveraging conversational AI and user interaction.
+                                    </ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Conversational AI</li>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Python</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Captures user queries and provides relevant responses.</li>
+                                        <li>Uses NLP models to understand and respond to user inputs.</li>
+                                        <li>Can be integrated into any website for customer support.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Enhanced customer support experience.</li>
+                                        <li>24/7 availability of support through the chatbot.</li>
+                                        <li>Reduced workload for customer support teams.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Website_Support_Chatbot" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Youtube Script Writing Tool</h5>
+                        <img src="{% static 'assets/imgs/youtube-script-writing.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Assist in writing scripts for YouTube videos.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="4" data-description="
+                                <h5>Youtube Script Writing Tool</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>
+                                        To develop a tool that assists in writing scripts for YouTube videos using natural language processing.
+                                    </ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Machine Learning</li>
+                                        <li>Python</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Captures user input for video ideas and topics.</li>
+                                        <li>Generates script outlines and detailed scripts.</li>
+                                        <li>Uses NLP models to ensure coherent and engaging content.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Streamlined scriptwriting process for YouTube content creators.</li>
+                                        <li>High-quality and engaging video scripts.</li>
+                                        <li>Saves time and effort in scriptwriting.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Youtube_Script_Writer" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Automatic Ticket Classification Tool</h5>
+                        <img src="{% static 'assets/imgs/auto-ticket-classification.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Automatically classify support tickets.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="3" data-description="
+                                <h5>Automatic Ticket Classification Tool</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>
+                                        To create a tool that automatically classifies support tickets using machine learning algorithms.
+                                    </ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Machine Learning</li>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Python</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Captures user queries and creates embeddings for classification.</li>
+                                        <li>Uses Pinecone for storing and retrieving embeddings.</li>
+                                        <li>Predicts the department to which the ticket should be submitted.</li>
+                                        <li>Allows users to submit tickets and provides feedback on the classification.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Automated classification of support tickets.</li>
+                                        <li>Reduced response time for support teams.</li>
+                                        <li>Efficient handling and routing of support queries.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Automatic_Ticket_Clasification_Tool" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Resume Screening Assistance Project</h5>
+                        <img src="{% static 'assets/imgs/resume-screening-assistance.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Assist in screening resumes.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="6" data-description="
+                                <h5>Resume Screening Assistance Project</h5><br>
+                                <p><strong>Purpose of the project:</strong>
+                                    <ul>
+                                        To develop a tool that assists in screening resumes using natural language processing and machine learning techniques.
+                                    </ul>
+                                </p>
+                                <p><strong>Technologies used:</strong>
+                                    <ul>
+                                        <li>Natural Language Processing (NLP)</li>
+                                        <li>Machine Learning</li>
+                                        <li>Python</li>
+                                        <li>Streamlit for the interface</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Key features:</strong>
+                                    <ul>
+                                        <li>Allows HR professionals to upload job descriptions and resumes.</li>
+                                        <li>Uses embeddings to match resumes to job descriptions.</li>
+                                        <li>Summarizes relevant resumes and provides match scores.</li>
+                                    </ul>
+                                </p>
+                                <p><strong>Outcomes or results:</strong>
+                                    <ul>
+                                        <li>Efficient and accurate screening of resumes.</li>
+                                        <li>Saves time for HR professionals by automating the initial screening process.</li>
+                                        <li>Provides detailed summaries and match scores for better decision-making.</li>
+                                    </ul>
+                                </p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/Resume_Screening_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Portfolio section -->
+
+    <!-- Example Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modals = document.querySelectorAll('.modal');
+            var closeBtns = document.querySelectorAll('.close-btn');
+
+            // Add event listener to each zoom button
+            document.querySelectorAll('.zoom-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const modalId = `modal${this.dataset.modal}`;
+                    const description = this.dataset.description;
+                    document.querySelector(`#${modalId} .modal-description`).innerHTML = description;
+                    openModal(modalId);
+                });
+            });
+
+            // Function to open modal
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
+
+            // Function to close modal
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+
+            // Add event listener to each close button
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const modalId = this.closest('.modal').id;
+                    closeModal(modalId);
+                });
+            });
+
+            // Close modal when clicking outside of it
+            window.onclick = function (event) {
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Testimonial Section -->
+    <section id="testimonial" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Testimonial</h6>
+            <h6 class="section-title mb-4">What People Say About Me</h6>
+            <p class="mb-5 pb-4">Here are some testimonials from people I've worked with:</p>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card testimonial-card border">
+                            <div class="card-body">
+                                <p>Dhaerieshan's AI and ML projects have greatly benefited our students. His practical
+                                    approach have significantly enhanced their learning experience and understanding of
+                                    complex concepts.</p>
+                                <h1 class="title">Dr. Shankari</h1>
+                                <h1 class="subtitle">Professor</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testimonial-card border">
+                            <div class="card-body">
+                                <p>Working with Dhaerieshan has been an enriching experience for our students. His
+                                    expertise in AI and ML has provided them with valuable insights and hands-on
+                                    experience that are crucial for their academic growth.</p>
+                                <h1 class="title">Dr. Lakshimi Priya</h1>
+                                <h1 class="subtitle">Professor</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card testimonial-card border">
+                            <div class="card-body">
+                                <p>Dhaerieshan's contributions to our AI and ML curriculum have been exceptional. His
+                                    projects and guidance have helped our students develop practical skills and a deeper
+                                    understanding of the subject matter.</p>
+                                <h1 class="title">Dr. Bhayaga Mary</h1>
+                                <h1 class="subtitle">Professor</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Testimonial Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="position-relative section">
+        <div class="container text-center">
+            <h6 class="subtitle">Contact</h6>
+            <h6 class="section-title mb-4">Get In Touch With Me</h6>
+            <p class="mb-5 pb-4">I'm available for AI and ML projects and consultations. Feel free to reach out to me!
+            </p>
+
+            <div class="contact text-left">
+                <div class="form">
+                    <h6 class="subtitle">Available 24/7</h6>
+                    <h6 class="section-title mb-4">Get In Touch</h6>
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_name">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_email">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_message">Message</label>
+                            <textarea name="message" class="form-control" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-infos">
+                    <div class="item">
+                        <i class="ti-location-pin"></i>
+                        <div class="">
+                            <h5>Location</h5>
+                            <p>Chennai, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-mobile"></i>
+                        <div>
+                            <h5>Phone Number</h5>
+                            <p>7305576679</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="ti-email"></i>
+                        <div class="mb-0">
+                            <h5>Email Address</h5>
+                            <p>dhaerieshan@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.494036171103!2d78.68361811480529!3d10.789555992315667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf3704d2e9a91%3A0x8d8ad8880778440b!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1658222472093!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- End of Contact Section -->
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a
+                            href="https://github.com/dhaerieshan" target="_blank">Dhaerieshan M</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="https://linkedin.com/in/dhaerie-shan-38939a187"><i
+                                class="ti-linkedin"></i></a>
+                        <a class="social-item" href="https://github.com/dhaerieshan" target="_blank"><i class="ti-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of page footer -->
+
+    <!-- core  -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+</body>
+
+</html>
