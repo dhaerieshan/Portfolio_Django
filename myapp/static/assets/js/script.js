@@ -1,4 +1,5 @@
-// jQuery for smooth scrolling
+
+// Smooth scrolling for navigation links
 $(document).ready(function(){
     $(".nav-link").on('click', function(event) {
         if (this.hash !== "") {
@@ -10,6 +11,14 @@ $(document).ready(function(){
                 window.location.hash = hash;
             });
         }
+    });
+
+    // Smooth scrolling for overlay links
+    $(".overlay-link").click(function() {
+        var target = $(this).data('target');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
     });
 });
 
@@ -42,7 +51,7 @@ particlesJS("particles-js", {
             }
         },
         "opacity": {
-            "value": 5,
+            "value": 0.5,
             "random": false,
             "anim": {
                 "enable": false,
@@ -65,8 +74,8 @@ particlesJS("particles-js", {
             "enable": true,
             "distance": 150,
             "color": "#ffffff",
-            "opacity": 4,
-            "width": 2
+            "opacity": 0.4,
+            "width": 1
         },
         "move": {
             "enable": true,
@@ -125,6 +134,7 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
+// Hide and show navbar on scroll
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
 
@@ -160,6 +170,7 @@ document.addEventListener('touchmove', function (e) {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 }, { passive: true });
 
+// Section highlight on scroll
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -192,6 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial reveal for sections in the viewport
     revealSection();
 });
+
+// Scroll arrow visibility
 document.addEventListener('DOMContentLoaded', function () {
     const arrow = document.querySelector('.scroll-arrow');
 
@@ -213,6 +226,8 @@ document.addEventListener('DOMContentLoaded', function () {
         checkScroll();  // Initial check
     }
 });
+
+// Smooth scroll for hash links
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll('a[href^="#"]');
 
@@ -232,13 +247,43 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 });
-$(document).ready(function() {
-    $(".overlay-link").click(function() {
-        var target = $(this).data('target');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 1000);
-    });
+
+// Progress bars fill on scroll into view
+document.addEventListener("DOMContentLoaded", function() {
+    function move(bar, targetWidth) {
+        let width = 1;
+        let id = setInterval(frame, 10);
+        function frame() {
+            if (width >= targetWidth) {
+                clearInterval(id);
+            } else {
+                width++;
+                bar.style.width = width + "%";
+            }
+        }
+    }
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleScroll() {
+        const skillContainers = document.querySelectorAll(".skill-container .progress-bar");
+        skillContainers.forEach(function(bar) {
+            if (isElementInViewport(bar) && !bar.classList.contains('filled')) {
+                const targetWidth = parseInt(bar.getAttribute('data-width'));
+                move(bar, targetWidth);
+                bar.classList.add('filled'); // Add class to mark as filled
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();  // Trigger once to check the initial viewport
 });
-
-
