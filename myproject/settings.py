@@ -127,10 +127,6 @@ EMAIL_HOST_USER = 'dhaerieshan@gmail.com'
 EMAIL_HOST_PASSWORD = 'fspf dtko qafe nvwa'  # Or app-specific password if 2FA is enabled
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/dev/howto/static-files/
-
-# settings.py
 
 import os
 from pathlib import Path
