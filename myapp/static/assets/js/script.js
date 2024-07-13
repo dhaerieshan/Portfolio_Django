@@ -51,7 +51,7 @@ particlesJS("particles-js", {
             }
         },
         "opacity": {
-            "value": 0.5,
+            "value": 2,
             "random": false,
             "anim": {
                 "enable": false,
@@ -74,8 +74,8 @@ particlesJS("particles-js", {
             "enable": true,
             "distance": 150,
             "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
+            "opacity": 1.9,
+            "width": 1.5
         },
         "move": {
             "enable": true,
@@ -286,4 +286,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();  // Trigger once to check the initial viewport
+});
+$(document).ready(function () {
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 });

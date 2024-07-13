@@ -11672,7 +11672,7 @@ pre {
 
 /* Progress Bar Animation */
 .progress-bar {
-    transition: width  0.2s linear;
+    transition: width  1s linear;
 }
 
 /* Initially set the width of progress bars to 0 */
