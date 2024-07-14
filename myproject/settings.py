@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-4r(n22z(o%9)#_csh+*4p(s8$3$w7&bna)yppoppa2yo_2p79a
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '13.60.46.75',  # Ensure this is your current local IP address
+    'd-shan.services',
+    'www.d-shan.services' # Ensure this is your current local IP address
 ]
 
 
