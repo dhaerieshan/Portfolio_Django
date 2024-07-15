@@ -24,9 +24,7 @@ SECRET_KEY = 'django-insecure-4r(n22z(o%9)#_csh+*4p(s8$3$w7&bna)yppoppa2yo_2p79a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'd-shan.services',
-    'www.d-shan.services' # Ensure this is your current local IP address
+ALLOWED_HOSTS = [ # Ensure this is your current local IP address
 ]
 
 
