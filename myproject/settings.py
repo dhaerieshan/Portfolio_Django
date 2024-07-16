@@ -25,8 +25,8 @@ SECRET_KEY = 'wbr)%e!bdzhcwkv_#%)8j*)2pn53@7f=gv1pl@=)r4y#pme!84'
 DEBUG = True
 
 ALLOWED_HOSTS = [ 
-    'd-shan.services'
-    'www.d-shan.service'# Ensure this is your current local IP address
+    'd-shan.services',
+    'www.d-shan.services'# Ensure this is your current local IP address
 ]
 
 
