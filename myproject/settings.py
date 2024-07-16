@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [ 
     'd-shan.services',
+    '127.0.0.1',
     'www.d-shan.services'# Ensure this is your current local IP address
 ]
 
