@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'wbr)%e!bdzhcwkv_#%)8j*)2pn53@7f=gv1pl@=)r4y#pme!84'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [ 
     'd-shan.services'
