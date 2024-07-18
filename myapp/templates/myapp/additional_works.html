@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dhaerieshan Portfolio - Additional Works</title>
+    <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <style>
+        .back-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ff7043; /* Your button color */
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        .back-button i {
+            margin-right: 8px; /* Space between the arrow and the text */
+            display: flex;
+            align-items: center; /* Aligns the arrow icon vertically */
+        }
+
+        .back-button span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <div class="animated-background"></div>
+    <div id="particles-js"></div>
+
+    <!-- Page navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="navigateToSection('home')"><img src="{% static 'assets/imgs/logo.svg' %}" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}" class="btn btn-primary rounded back-button">
+                            <i class="ti-arrow-left"></i><span>Back</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- End of page navigation -->
+
+    <!-- Additional Works Section -->
+    <section id="additional-works" class="section">
+        <div class="container text-center">
+            <h6 class="subtitle">Additional Works</h6>
+            <h6 class="section-title mb-4">Explore My Other Projects</h6>
+            <p class="mb-5 pb-4">Here are some additional projects I have worked on:</p>
+            <div class="row">
+                <!-- Example Project 1 -->
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Project Title 1</h5>
+                        <img src="{% static 'assets/imgs/project1.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Short description of project 1.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="1" data-description="
+                                <h5>Project Title 1</h5><br>
+                                <p><strong>Purpose of the project:</strong> Brief description of the purpose.</p>
+                                <p><strong>Technologies used:</strong> List of technologies.</p>
+                                <p><strong>Key features:</strong> List of key features.</p>
+                                <p><strong>Outcomes or results:</strong> List of outcomes or results.</p>
+                                "><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/project1" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Example Project 2 -->
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Project Title 2</h5>
+                        <img src="{% static 'assets/imgs/project2.jpg' %}" alt="" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>Short description of project 2.</p>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="2" data-description="
+                                <h5>Project Title 2</h5><br>
+                                <p><strong>Purpose of the project:</strong> Brief description of the purpose.</p>
+                                <p><strong>Technologies used:</strong> List of technologies.</p>
+                                <p><strong>Key features:</strong> List of key features.</p>
+                                <p><strong>Outcomes or results:</strong> List of outcomes or results.</p>
+                                "><i class="ti-zoom-in"></i></a>
+                                <a href="https://github.com/dhaerieshan/project2" class="link-btn" target="_blank"><i class="ti-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+    <!-- End of Additional Works Section -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+    <!-- Add more modals as needed -->
+
+    <!-- Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modals = document.querySelectorAll('.modal');
+            var closeBtns = document.querySelectorAll('.close-btn');
+
+            // Add event listener to each zoom button
+            document.querySelectorAll('.zoom-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const modalId = `modal${this.dataset.modal}`;
+                    const description = this.dataset.description;
+                    document.querySelector(`#${modalId} .modal-description`).innerHTML = description;
+                    openModal(modalId);
+                });
+            });
+
+            // Function to open modal
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "block";
+            }
+
+            // Function to close modal
+            function closeModal(modalId) {
+                document.getElementById(modalId).style.display = "none";
+            }
+
+            // Add event listener to each close button
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const modalId = this.closest('.modal').id;
+                    closeModal(modalId);
+                });
+            });
+
+            // Close modal when clicking outside of it
+            window.onclick = function (event) {
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> Dhaerieshan M</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="socials">
+                        <a class="social-item" href="https://linkedin.com/in/dhaerie-shan-38939a187"><i class="ti-linkedin"></i></a>
+                        <a class="social-item" href="https://github.com/dhaerieshan" target="_blank"><i class="ti-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+</body>
+
+</html>
