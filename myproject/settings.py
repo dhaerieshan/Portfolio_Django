@@ -126,8 +126,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'dhaerieshan@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'default_password_if_not_set') # Or app-specific password if 2FA is enabled
-
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'default_password_if_not_set') # Or app-specific password if 2FA is enabled
+print("DEBUG PASSWORD:", os.environ.get('EMAIL_HOST_PASSWORD'))
 
 
 import os
