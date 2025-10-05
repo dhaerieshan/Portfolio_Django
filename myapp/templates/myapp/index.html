@@ -626,64 +626,43 @@
 
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">I'm available for AI and ML projects and consultations. Feel free to reach out to me!
-            </p>
+    <div class="container text-center" style="position: relative; z-index: 2;">
+        <h6 class="subtitle">Contact</h6>
+        <h6 class="section-title mb-4">Get In Touch With Me</h6>
+        <p class="mb-5 pb-4">I'm available for AI and ML projects and consultations. Feel free to reach out to me!
+        </p>
 
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form method="POST" action="{% url 'contact' %}">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <label for="id_name">Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_email">Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_message">Message</label>
-                            <textarea name="message" class="form-control" placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p>Chennai, Tamil Nadu, India</p>
-                        </div>
+        <div class="contact text-left">
+            <div class="form">
+                <h6 class="subtitle">Available 24/7</h6>
+                <h6 class="section-title mb-4">Get In Touch</h6>
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_name">Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
                     </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>7305576679</p>
-                        </div>
+                    <div class="form-group">
+                        <label for="id_email">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
                     </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>dhaerieshan@gmail.com</p>
-                        </div>
+                    <div class="form-group">
+                        <label for="id_message">Message</label>
+                        <textarea name="message" class="form-control" placeholder="Enter your message" required></textarea>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                </form>
             </div>
+            <div class="contact-infos">
+                </div>
         </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.494036171103!2d78.68361811480529!3d10.789555992315667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf3704d2e9a91%3A0x8d8ad8880778440b!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1658222472093!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+    </div>
+    <div id="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.494036171103!2d78.68361811480529!3d10.789555992315667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf3704d2e9a91%3A0x8d8ad8880778440b!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1658222472093!5m2!1sen!2sus" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
