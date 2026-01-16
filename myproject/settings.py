@@ -23,12 +23,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default_secret_key')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'd-shan.services',
-    '127.0.0.1',
-    'www.d-shan.services'# Ensure this is your current local IP address
+    "dhaereishan.work.gd",
+    "www.dhaereishan.work.gd",
+    ".onrender.com",
+    '127.0.0.1'
+
 ]
 
 LOGGING = {
@@ -69,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'myproject.urls'
@@ -155,3 +159,5 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
