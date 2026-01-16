@@ -26,8 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default_secret_key')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "dhaereishan.work.gd",
-    "www.dhaereishan.work.gd",
+    "dhaerieshan.work.gd",
+    "www.dhaerieshan.work.gd",
     ".onrender.com",
     '127.0.0.1'
 
