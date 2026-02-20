@@ -1,30 +1,22 @@
-
-// Smooth scrolling for navigation links
-$(document).ready(function(){
-    $(".nav-link").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 1000, 'easeInOutExpo', function(){
-                window.location.hash = hash;
-            });
-        }
+/* =========================================
+   1. PARTICLES & NAVIGATION (jQuery)
+   ========================================= */
+$(document).ready(function() {
+    // Close mobile navbar when a link is clicked
+    $('.navbar-nav>li>a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
     });
 
-    // Smooth scrolling for overlay links
-    $(".overlay-link").click(function() {
-        var target = $(this).data('target');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top
-        }, 1000);
-    });
+    // NOTE: I removed the jQuery smooth scroll that was likely crashing your code
+    // because 'easeInOutExpo' was missing. The "Vanilla JS" version below is safer.
 });
 
-// ParticlesJS configuration
-particlesJS("particles-js", {
-    "particles": {
+/* =========================================
+   2. PARTICLES JS CONFIGURATION
+   ========================================= */
+// Wrap in try-catch to prevent crashing if particles.js isn't loaded
+try {
+    particlesJS("particles-js", {    "particles": {
         "number": {
             "value": 80,
             "density": {
@@ -134,161 +126,157 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-// Hide and show navbar on scroll
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
+} catch (e) {
+    console.log("Particles.js not loaded, skipping.");
+}
 
-document.addEventListener('mousemove', function (e) {
-    if (e.clientY <= 50) {
-        navbar.classList.remove('navbar-hidden');
-    }
-});
+/* =========================================
+   3. MAIN INTERACTIVITY (Vanilla JS)
+   ========================================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener('scroll', function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // --- A. Navbar Hide/Show on Scroll ---
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
 
-    if (scrollTop > lastScrollTop) {
-        // Scroll Down
-        navbar.classList.add('navbar-hidden');
-    } else {
-        // Scroll Up
-        navbar.classList.remove('navbar-hidden');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-});
-
-document.addEventListener('touchmove', function (e) {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        // Scroll Down
-        navbar.classList.add('navbar-hidden');
-    } else {
-        // Scroll Up
-        navbar.classList.remove('navbar-hidden');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-}, { passive: true });
-
-// Section highlight on scroll
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-    function revealSection() {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
-                section.classList.add('active');
+    if (navbar) { // Safety check
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('navbar-hidden'); // Scroll Down
             } else {
-                section.classList.remove('active');
+                navbar.classList.remove('navbar-hidden'); // Scroll Up
             }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
-            }
+        // Show navbar when mouse is near top
+        document.addEventListener('mousemove', function(e) {
+            if (e.clientY <= 50) navbar.classList.remove('navbar-hidden');
         });
     }
 
-    window.addEventListener('scroll', revealSection);
 
-    // Initial reveal for sections in the viewport
-    revealSection();
-});
+    // --- B. Smooth Scroll (The Working Version) ---
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            const targetId = link.getAttribute("href").substring(1);
+            if (!targetId) return; // Skip if href="#"
 
-// Scroll arrow visibility
-document.addEventListener('DOMContentLoaded', function () {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                event.preventDefault();
+                const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY; // More reliable calculation
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+
+    // --- C. Scroll Arrow Visibility ---
     const arrow = document.querySelector('.scroll-arrow');
-
-    if (arrow) { // Ensure the arrow element exists
+    const homeSection = document.getElementById('home');
+    if (arrow && homeSection) {
         function checkScroll() {
-            const homeSection = document.getElementById('home');
             const rect = homeSection.getBoundingClientRect();
-
-            if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+            // Show arrow if home is still somewhat visible
+            if (rect.bottom >= 0) {
                 arrow.style.display = 'block';
             } else {
                 arrow.style.display = 'none';
             }
         }
-
         window.addEventListener('scroll', checkScroll);
-        window.addEventListener('resize', checkScroll);
-
-        checkScroll();  // Initial check
+        checkScroll();
     }
-});
 
-// Smooth scroll for hash links
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('a[href^="#"]');
 
-    for (const link of links) {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
+    // --- D. Section Highlighting ---
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-        const targetId = link.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth"
-          });
-        }
-      });
-    }
-});
-
-// Progress bars fill on scroll into view
-document.addEventListener("DOMContentLoaded", function() {
-    function move(bar, targetWidth) {
-        let width = 1;
-        let id = setInterval(frame, 10);
-        function frame() {
-            if (width >= targetWidth) {
-                clearInterval(id);
-            } else {
-                width++;
-                bar.style.width = width + "%";
+    function revealSection() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
             }
-        }
-    }
-
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function handleScroll() {
-        const skillContainers = document.querySelectorAll(".skill-container .progress-bar");
-        skillContainers.forEach(function(bar) {
-            if (isElementInViewport(bar) && !bar.classList.contains('filled')) {
-                const targetWidth = parseInt(bar.getAttribute('data-width'));
-                move(bar, targetWidth);
-                bar.classList.add('filled'); // Add class to mark as filled
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current) && current !== '') {
+                link.classList.add('active');
             }
         });
     }
+    window.addEventListener('scroll', revealSection);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();  // Trigger once to check the initial viewport
-});
-$(document).ready(function () {
-    $('.navbar-nav>li>a').on('click', function(){
-        $('.navbar-collapse').collapse('hide');
-    });
+
+    // --- E. Progress Bars ---
+    const skillContainers = document.querySelectorAll(".skill-container .progress-bar");
+
+    function handleProgressBar() {
+        skillContainers.forEach(function(bar) {
+            const rect = bar.getBoundingClientRect();
+            const inView = (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+
+            if (inView && !bar.classList.contains('filled')) {
+                bar.classList.add('filled');
+                const targetWidth = bar.getAttribute('data-width'); // e.g. "80%"
+                // Simple CSS transition is better than setInterval for performance
+                bar.style.width = targetWidth + "%";
+            }
+        });
+    }
+    window.addEventListener("scroll", handleProgressBar);
+
+
+    // --- F. NUMBER COUNTERS (The Fix) ---
+    const counters = document.querySelectorAll(".counter");
+    const animationDuration = 1000; // 2 seconds
+
+    const startCounter = (counter) => {
+        // Safe check for data-target
+        const targetAttr = counter.getAttribute('data-target');
+        if (!targetAttr) return; // Skip if no number provided
+
+        const target = +targetAttr;
+        const startTime = performance.now();
+
+        const update = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+
+            // Calculate current number
+            counter.innerText = Math.floor(progress * target);
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.1 }
+    );
+
+    counters.forEach(counter => observer.observe(counter));
+
 });
