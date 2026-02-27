@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280" viewBox="0 0 460 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f2027"/>
+      <stop offset="50%" style="stop-color:#203a43"/>
+      <stop offset="100%" style="stop-color:#2c5364"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7043"/>
+      <stop offset="100%" style="stop-color:#e64a19"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#26a69a"/>
+      <stop offset="100%" style="stop-color:#00796b"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c6bc0"/>
+      <stop offset="100%" style="stop-color:#3949ab"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="460" height="280" fill="url(#bg)" rx="0"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="56" x2="460" y2="56"/>
+    <line x1="0" y1="112" x2="460" y2="112"/>
+    <line x1="0" y1="168" x2="460" y2="168"/>
+    <line x1="0" y1="224" x2="460" y2="224"/>
+    <line x1="92" y1="0" x2="92" y2="280"/>
+    <line x1="184" y1="0" x2="184" y2="280"/>
+    <line x1="276" y1="0" x2="276" y2="280"/>
+    <line x1="368" y1="0" x2="368" y2="280"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="460" height="38" fill="rgba(0,0,0,0.35)"/>
+  <!-- Traffic lights -->
+  <circle cx="20" cy="19" r="5" fill="#ff5f57"/>
+  <circle cx="36" cy="19" r="5" fill="#ffbd2e"/>
+  <circle cx="52" cy="19" r="5" fill="#28ca41"/>
+  <!-- URL bar -->
+  <rect x="70" y="10" width="260" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+  <text x="85" y="23" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)">https://ecommerce-backend-ik3q.onrender.com</text>
+  <!-- Status badge -->
+  <rect x="342" y="10" width="52" height="18" rx="4" fill="rgba(40,202,65,0.2)"/>
+  <circle cx="352" cy="19" r="3" fill="#28ca41"/>
+  <text x="358" y="23" font-family="sans-serif" font-size="9" font-weight="700" fill="#28ca41">LIVE</text>
+
+  <!-- Title -->
+  <text x="230" y="72" font-family="sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle" filter="url(#glow)">E-Commerce REST API</text>
+
+  <!-- API endpoint cards -->
+  <!-- Card 1: POST /auth -->
+  <rect x="24" y="85" width="120" height="52" rx="6" fill="url(#card1)" opacity="0.92"/>
+  <text x="34" y="102" font-family="monospace" font-size="9" font-weight="700" fill="rgba(255,255,255,0.7)">POST</text>
+  <text x="68" y="102" font-family="monospace" font-size="9" fill="white">/auth/login</text>
+  <text x="34" y="118" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.75)">JWT Authentication</text>
+  <rect x="34" y="126" width="36" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="76" y="126" width="28" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Card 2: GET /products -->
+  <rect x="158" y="85" width="120" height="52" rx="6" fill="url(#card2)" opacity="0.92"/>
+  <text x="168" y="102" font-family="monospace" font-size="9" font-weight="700" fill="rgba(255,255,255,0.7)">GET</text>
+  <text x="196" y="102" font-family="monospace" font-size="9" fill="white">/products</text>
+  <text x="168" y="118" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.75)">Product Catalogue</text>
+  <rect x="168" y="126" width="40" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="214" y="126" width="24" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Card 3: POST /orders -->
+  <rect x="292" y="85" width="120" height="52" rx="6" fill="url(#card3)" opacity="0.92"/>
+  <text x="302" y="102" font-family="monospace" font-size="9" font-weight="700" fill="rgba(255,255,255,0.7)">POST</text>
+  <text x="336" y="102" font-family="monospace" font-size="9" fill="white">/orders</text>
+  <text x="302" y="118" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.75)">Order Management</text>
+  <rect x="302" y="126" width="32" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+  <rect x="340" y="126" width="44" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Connector arrows between cards -->
+  <g stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="3,3" fill="none">
+    <line x1="144" y1="111" x2="158" y2="111"/>
+    <line x1="278" y1="111" x2="292" y2="111"/>
+  </g>
+  <polygon points="156,108 162,111 156,114" fill="rgba(255,255,255,0.2)"/>
+  <polygon points="290,108 296,111 290,114" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Tech stack pills row -->
+  <g font-family="monospace" font-size="9" font-weight="700">
+    <!-- Spring Boot -->
+    <rect x="24" y="155" width="74" height="18" rx="4" fill="rgba(109,179,63,0.2)" stroke="rgba(109,179,63,0.5)" stroke-width="1"/>
+    <text x="36" y="168" fill="#8bc34a">Spring Boot</text>
+
+    <!-- PostgreSQL -->
+    <rect x="104" y="155" width="72" height="18" rx="4" fill="rgba(51,103,145,0.3)" stroke="rgba(51,103,145,0.6)" stroke-width="1"/>
+    <text x="114" y="168" fill="#64b5f6">PostgreSQL</text>
+
+    <!-- Docker -->
+    <rect x="182" y="155" width="52" height="18" rx="4" fill="rgba(13,183,237,0.2)" stroke="rgba(13,183,237,0.5)" stroke-width="1"/>
+    <text x="196" y="168" fill="#29b6f6">Docker</text>
+
+    <!-- JWT -->
+    <rect x="240" y="155" width="36" height="18" rx="4" fill="rgba(255,152,0,0.2)" stroke="rgba(255,152,0,0.5)" stroke-width="1"/>
+    <text x="250" y="168" fill="#ffa726">JWT</text>
+
+    <!-- Render -->
+    <rect x="282" y="155" width="50" height="18" rx="4" fill="rgba(255,112,67,0.2)" stroke="rgba(255,112,67,0.5)" stroke-width="1"/>
+    <text x="292" y="168" fill="#ff7043">Render</text>
+
+    <!-- REST API -->
+    <rect x="338" y="155" width="56" height="18" rx="4" fill="rgba(156,39,176,0.2)" stroke="rgba(156,39,176,0.5)" stroke-width="1"/>
+    <text x="348" y="168" fill="#ce93d8">REST API</text>
+  </g>
+
+  <!-- Bottom stats bar -->
+  <rect x="0" y="190" width="460" height="90" fill="rgba(0,0,0,0.3)"/>
+
+  <!-- Stat 1 -->
+  <text x="60" y="218" font-family="sans-serif" font-size="22" font-weight="700" fill="#ff7043" text-anchor="middle">30+</text>
+  <text x="60" y="234" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle">ENDPOINTS</text>
+
+  <!-- divider -->
+  <line x1="115" y1="200" x2="115" y2="272" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Stat 2 -->
+  <text x="175" y="218" font-family="sans-serif" font-size="22" font-weight="700" fill="#26a69a" text-anchor="middle">3</text>
+  <text x="175" y="234" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle">USER ROLES</text>
+
+  <!-- divider -->
+  <line x1="230" y1="200" x2="230" y2="272" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Stat 3 -->
+  <text x="290" y="218" font-family="sans-serif" font-size="22" font-weight="700" fill="#5c6bc0" text-anchor="middle">JWT</text>
+  <text x="290" y="234" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle">AUTH</text>
+
+  <!-- divider -->
+  <line x1="345" y1="200" x2="345" y2="272" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Stat 4 -->
+  <text x="400" y="218" font-family="sans-serif" font-size="22" font-weight="700" fill="#28ca41" text-anchor="middle">Live</text>
+  <text x="400" y="234" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle">DEPLOYED</text>
+
+  <!-- Bottom description -->
+  <text x="230" y="260" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.35)" text-anchor="middle">Full-stack DevOps project · Docker · PostgreSQL · Spring Boot · Deployed on Render</text>
+</svg>

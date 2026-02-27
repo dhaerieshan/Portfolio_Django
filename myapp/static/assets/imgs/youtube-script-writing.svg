@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280" viewBox="0 0 460 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="50%" style="stop-color:#2a0f0f"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="yt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="460" height="280" fill="url(#bg)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="56" x2="460" y2="56"/>
+    <line x1="0" y1="140" x2="460" y2="140"/>
+    <line x1="0" y1="224" x2="460" y2="224"/>
+    <line x1="153" y1="0" x2="153" y2="280"/>
+    <line x1="307" y1="0" x2="307" y2="280"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="460" height="38" fill="rgba(0,0,0,0.5)"/>
+  <circle cx="20" cy="19" r="5" fill="#ff5f57"/>
+  <circle cx="36" cy="19" r="5" fill="#ffbd2e"/>
+  <circle cx="52" cy="19" r="5" fill="#28ca41"/>
+  <rect x="70" y="10" width="200" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+  <text x="85" y="23" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">YouTube Script Writer · AI-Powered</text>
+
+  <!-- Title -->
+  <text x="230" y="68" font-family="sans-serif" font-size="17" font-weight="700" fill="white" text-anchor="middle">YouTube Script Writing Tool</text>
+
+  <!-- YouTube logo area -->
+  <rect x="30" y="82" width="100" height="58" rx="8" fill="url(#yt)" opacity="0.9"/>
+  <polygon points="65,100 65,126 88,113" fill="white"/>
+  <text x="80" y="152" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Video Idea</text>
+
+  <!-- Arrow -->
+  <g stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3">
+    <line x1="130" y1="111" x2="152" y2="111"/>
+  </g>
+  <polygon points="150,108 156,111 150,114" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- AI Processing -->
+  <rect x="152" y="82" width="100" height="58" rx="8" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.4)" stroke-width="1"/>
+  <text x="202" y="104" font-family="sans-serif" font-size="20" text-anchor="middle">🧠</text>
+  <text x="202" y="120" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(167,139,250,0.9)" text-anchor="middle">AI ENGINE</text>
+  <text x="202" y="132" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.4)" text-anchor="middle">NLP · GPT-4</text>
+  <text x="202" y="152" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.4)" text-anchor="middle">Processing...</text>
+
+  <!-- Arrow -->
+  <g stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3">
+    <line x1="252" y1="111" x2="274" y2="111"/>
+  </g>
+  <polygon points="272,108 278,111 272,114" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Script output -->
+  <rect x="274" y="82" width="162" height="58" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="355" y="98" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="middle">📄 GENERATED SCRIPT</text>
+  <rect x="284" y="104" width="142" height="5" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="284" y="114" width="120" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+  <rect x="284" y="124" width="135" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+  <rect x="284" y="134" width="100" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
+  <text x="355" y="152" font-family="sans-serif" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Hook · Content · CTA</text>
+
+  <!-- Script structure cards -->
+  <rect x="30" y="152" width="90" height="60" rx="6" fill="rgba(255,0,0,0.1)" stroke="rgba(255,0,0,0.3)" stroke-width="1"/>
+  <text x="75" y="168" font-family="sans-serif" font-size="9" font-weight="700" fill="#ff5252" text-anchor="middle">🎣 HOOK</text>
+  <rect x="40" y="174" width="70" height="4" rx="2" fill="rgba(255,82,82,0.3)"/>
+  <rect x="40" y="183" width="55" height="4" rx="2" fill="rgba(255,82,82,0.2)"/>
+  <rect x="40" y="192" width="62" height="4" rx="2" fill="rgba(255,82,82,0.2)"/>
+  <text x="75" y="206" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">0:00 - 0:30</text>
+
+  <rect x="130" y="152" width="90" height="60" rx="6" fill="rgba(255,152,0,0.1)" stroke="rgba(255,152,0,0.3)" stroke-width="1"/>
+  <text x="175" y="168" font-family="sans-serif" font-size="9" font-weight="700" fill="#ffa726" text-anchor="middle">📝 CONTENT</text>
+  <rect x="140" y="174" width="70" height="4" rx="2" fill="rgba(255,167,38,0.3)"/>
+  <rect x="140" y="183" width="55" height="4" rx="2" fill="rgba(255,167,38,0.2)"/>
+  <rect x="140" y="192" width="65" height="4" rx="2" fill="rgba(255,167,38,0.2)"/>
+  <text x="175" y="206" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">0:30 - 8:00</text>
+
+  <rect x="230" y="152" width="90" height="60" rx="6" fill="rgba(40,202,65,0.1)" stroke="rgba(40,202,65,0.3)" stroke-width="1"/>
+  <text x="275" y="168" font-family="sans-serif" font-size="9" font-weight="700" fill="#28ca41" text-anchor="middle">📢 CTA</text>
+  <rect x="240" y="174" width="70" height="4" rx="2" fill="rgba(40,202,65,0.3)"/>
+  <rect x="240" y="183" width="55" height="4" rx="2" fill="rgba(40,202,65,0.2)"/>
+  <rect x="240" y="192" width="60" height="4" rx="2" fill="rgba(40,202,65,0.2)"/>
+  <text x="275" y="206" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">8:00 - 9:00</text>
+
+  <rect x="330" y="152" width="106" height="60" rx="6" fill="rgba(0,188,212,0.1)" stroke="rgba(0,188,212,0.3)" stroke-width="1"/>
+  <text x="383" y="168" font-family="sans-serif" font-size="9" font-weight="700" fill="#26c6da" text-anchor="middle">📊 METADATA</text>
+  <text x="383" y="183" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.4)" text-anchor="middle">Title · Tags · Desc</text>
+  <rect x="340" y="188" width="86" height="4" rx="2" fill="rgba(0,188,212,0.3)"/>
+  <rect x="340" y="197" width="66" height="4" rx="2" fill="rgba(0,188,212,0.2)"/>
+  <text x="383" y="208" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" text-anchor="middle">SEO Optimised</text>
+
+  <!-- Tech pills -->
+  <g font-family="monospace" font-size="9" font-weight="700">
+    <rect x="24" y="226" width="50" height="18" rx="4" fill="rgba(3,169,244,0.2)" stroke="rgba(3,169,244,0.5)" stroke-width="1"/>
+    <text x="49" y="239" fill="#29b6f6" text-anchor="middle">Python</text>
+    <rect x="80" y="226" width="38" height="18" rx="4" fill="rgba(255,152,0,0.2)" stroke="rgba(255,152,0,0.5)" stroke-width="1"/>
+    <text x="99" y="239" fill="#ffa726" text-anchor="middle">NLP</text>
+    <rect x="124" y="226" width="50" height="18" rx="4" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+    <text x="149" y="239" fill="#a78bfa" text-anchor="middle">GPT-4</text>
+    <rect x="180" y="226" width="58" height="18" rx="4" fill="rgba(255,87,34,0.2)" stroke="rgba(255,87,34,0.5)" stroke-width="1"/>
+    <text x="209" y="239" fill="#ff7043" text-anchor="middle">Streamlit</text>
+    <rect x="244" y="226" width="68" height="18" rx="4" fill="rgba(255,0,0,0.2)" stroke="rgba(255,0,0,0.5)" stroke-width="1"/>
+    <text x="278" y="239" fill="#ff5252" text-anchor="middle">YouTube API</text>
+    <rect x="318" y="226" width="60" height="18" rx="4" fill="rgba(76,175,80,0.2)" stroke="rgba(76,175,80,0.5)" stroke-width="1"/>
+    <text x="348" y="239" fill="#66bb6a" text-anchor="middle">LangChain</text>
+  </g>
+
+  <rect x="0" y="252" width="460" height="28" fill="rgba(0,0,0,0.3)"/>
+  <text x="230" y="270" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" text-anchor="middle">AI-generated hooks · structured outlines · SEO metadata · saves hours of writing time</text>
+</svg>

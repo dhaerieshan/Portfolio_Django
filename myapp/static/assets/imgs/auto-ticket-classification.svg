@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280" viewBox="0 0 460 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="50%" style="stop-color:#0d1f3c"/>
+      <stop offset="100%" style="stop-color:#0f2a4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="460" height="280" fill="url(#bg)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="0" y1="56" x2="460" y2="56"/>
+    <line x1="0" y1="140" x2="460" y2="140"/>
+    <line x1="0" y1="224" x2="460" y2="224"/>
+    <line x1="153" y1="0" x2="153" y2="280"/>
+    <line x1="307" y1="0" x2="307" y2="280"/>
+  </g>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="460" height="38" fill="rgba(0,0,0,0.4)"/>
+  <circle cx="20" cy="19" r="5" fill="#ff5f57"/>
+  <circle cx="36" cy="19" r="5" fill="#ffbd2e"/>
+  <circle cx="52" cy="19" r="5" fill="#28ca41"/>
+  <rect x="70" y="10" width="220" height="18" rx="9" fill="rgba(255,255,255,0.08)"/>
+  <text x="85" y="23" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.45)">Auto Ticket Classifier · ML · Pinecone</text>
+
+  <text x="230" y="68" font-family="sans-serif" font-size="16" font-weight="700" fill="white" text-anchor="middle">Automatic Ticket Classification</text>
+
+  <!-- Incoming tickets (left) -->
+  <rect x="18" y="82" width="110" height="130" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="73" y="98" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="middle">📥 INCOMING</text>
+
+  <rect x="26" y="104" width="94" height="20" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="36" y="115" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)">#1042 · Login issue</text>
+  <text x="36" y="122" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,0.35)">2 mins ago</text>
+
+  <rect x="26" y="130" width="94" height="20" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="36" y="141" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)">#1043 · Billing error</text>
+  <text x="36" y="148" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,0.35)">5 mins ago</text>
+
+  <rect x="26" y="156" width="94" height="20" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="36" y="167" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)">#1044 · Refund req.</text>
+  <text x="36" y="174" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,0.35)">8 mins ago</text>
+
+  <rect x="26" y="182" width="94" height="20" rx="4" fill="rgba(255,255,255,0.07)"/>
+  <text x="36" y="193" font-family="sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)">#1045 · App crash</text>
+  <text x="36" y="200" font-family="sans-serif" font-size="6.5" fill="rgba(255,255,255,0.35)">12 mins ago</text>
+
+  <!-- Arrow to AI -->
+  <g stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3">
+    <line x1="128" y1="147" x2="158" y2="147"/>
+  </g>
+  <polygon points="156,144 162,147 156,150" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- AI classifier (center) -->
+  <rect x="158" y="82" width="140" height="130" rx="8" fill="rgba(124,58,237,0.12)" stroke="rgba(124,58,237,0.35)" stroke-width="1"/>
+  <text x="228" y="100" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(167,139,250,0.9)" text-anchor="middle">🧠 ML CLASSIFIER</text>
+  <text x="228" y="114" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Pinecone Vector DB</text>
+
+  <!-- Confidence bars -->
+  <text x="168" y="130" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Technical</text>
+  <rect x="168" y="133" width="120" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="168" y="133" width="96" height="6" rx="3" fill="rgba(124,58,237,0.6)"/>
+  <text x="270" y="139" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">80%</text>
+
+  <text x="168" y="152" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Billing</text>
+  <rect x="168" y="155" width="120" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="168" y="155" width="60" height="6" rx="3" fill="rgba(255,152,0,0.6)"/>
+  <text x="270" y="161" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">50%</text>
+
+  <text x="168" y="174" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Refund</text>
+  <rect x="168" y="177" width="120" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="168" y="177" width="36" height="6" rx="3" fill="rgba(40,202,65,0.6)"/>
+  <text x="270" y="183" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">30%</text>
+
+  <text x="228" y="202" font-family="sans-serif" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Embedding similarity · NLP features</text>
+
+  <!-- Arrow from AI -->
+  <g stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,3">
+    <line x1="298" y1="147" x2="326" y2="147"/>
+  </g>
+  <polygon points="324,144 330,147 324,150" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Departments (right) -->
+  <rect x="326" y="82" width="116" height="130" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="384" y="98" font-family="sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.4)" text-anchor="middle">📤 ROUTED TO</text>
+
+  <rect x="334" y="104" width="100" height="22" rx="4" fill="rgba(124,58,237,0.2)"/>
+  <text x="384" y="119" font-family="sans-serif" font-size="8" font-weight="700" fill="#a78bfa" text-anchor="middle">🔧 Technical Support</text>
+
+  <rect x="334" y="132" width="100" height="22" rx="4" fill="rgba(255,152,0,0.2)"/>
+  <text x="384" y="147" font-family="sans-serif" font-size="8" font-weight="700" fill="#ffa726" text-anchor="middle">💳 Billing</text>
+
+  <rect x="334" y="160" width="100" height="22" rx="4" fill="rgba(40,202,65,0.2)"/>
+  <text x="384" y="175" font-family="sans-serif" font-size="8" font-weight="700" fill="#28ca41" text-anchor="middle">💰 Refunds</text>
+
+  <rect x="334" y="188" width="100" height="22" rx="4" fill="rgba(2,136,209,0.2)"/>
+  <text x="384" y="203" font-family="sans-serif" font-size="8" font-weight="700" fill="#29b6f6" text-anchor="middle">🐛 Engineering</text>
+
+  <!-- Tech pills -->
+  <g font-family="monospace" font-size="9" font-weight="700">
+    <rect x="18" y="226" width="50" height="18" rx="4" fill="rgba(3,169,244,0.2)" stroke="rgba(3,169,244,0.5)" stroke-width="1"/>
+    <text x="43" y="239" fill="#29b6f6" text-anchor="middle">Python</text>
+    <rect x="74" y="226" width="60" height="18" rx="4" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+    <text x="104" y="239" fill="#a78bfa" text-anchor="middle">Pinecone</text>
+    <rect x="140" y="226" width="38" height="18" rx="4" fill="rgba(255,152,0,0.2)" stroke="rgba(255,152,0,0.5)" stroke-width="1"/>
+    <text x="159" y="239" fill="#ffa726" text-anchor="middle">NLP</text>
+    <rect x="184" y="226" width="38" height="18" rx="4" fill="rgba(76,175,80,0.2)" stroke="rgba(76,175,80,0.5)" stroke-width="1"/>
+    <text x="203" y="239" fill="#66bb6a" text-anchor="middle">ML</text>
+    <rect x="228" y="226" width="58" height="18" rx="4" fill="rgba(255,87,34,0.2)" stroke="rgba(255,87,34,0.5)" stroke-width="1"/>
+    <text x="257" y="239" fill="#ff7043" text-anchor="middle">Streamlit</text>
+    <rect x="292" y="226" width="80" height="18" rx="4" fill="rgba(0,188,212,0.2)" stroke="rgba(0,188,212,0.5)" stroke-width="1"/>
+    <text x="332" y="239" fill="#26c6da" text-anchor="middle">Embeddings</text>
+    <rect x="378" y="226" width="64" height="18" rx="4" fill="rgba(255,59,59,0.2)" stroke="rgba(255,59,59,0.5)" stroke-width="1"/>
+    <text x="410" y="239" fill="#ff5252" text-anchor="middle">Auto-Route</text>
+  </g>
+
+  <rect x="0" y="252" width="460" height="28" fill="rgba(0,0,0,0.3)"/>
+  <text x="230" y="270" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)" text-anchor="middle">ML-powered routing · Pinecone embeddings · 4 department queues · instant classification</text>
+</svg>
