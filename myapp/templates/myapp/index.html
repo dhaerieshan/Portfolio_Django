@@ -15,6 +15,35 @@
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="icon" href="{% static 'assets/imgs/logo.ico' %}" type="image/x-icon">
     <link rel="shortcut icon" href="{% static 'assets/imgs/logo.ico' %}" type="image/x-icon">
+    <style>
+        @media (max-width: 767px) {
+            .header .buttons {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            .header .buttons .btn {
+                width: auto !important;
+                padding: 8px 20px !important;
+                font-size: 13px !important;
+                margin-left: 0 !important;
+            }
+            .header .infos {
+                text-align: left !important;
+            }
+            .header .col-md-6 {
+                text-align: left !important;
+            }
+            .header .socials {
+                justify-content: flex-start !important;
+                display: flex !important;
+            }
+            .header h1,
+            .header h6,
+            .header p {
+                text-align: left !important;
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -43,9 +72,6 @@
         </div>
     </nav>
 
-    <!-- ══════════════════════════════════════
-         HERO / HEADER
-    ══════════════════════════════════════ -->
     <header class="header" id="home">
         <div class="container">
             <div class="row align-items-center">
@@ -53,24 +79,11 @@
                     <div class="infos">
                         <h6 class="subtitle reveal-text">hello, I'm</h6>
                         <h1 class="title reveal-text">Dhaerieshan&nbsp;M</h1>
-                        <p class="reveal-text">Software&nbsp;Engineer &amp; DevOps Enthusiast</p>
-
+                        <p class="reveal-text">Software&nbsp;Engineer</p>
                         <div class="buttons pt-3 d-flex align-items-center reveal-text">
                             <a class="btn btn-primary rounded" href="#contact">HIRE&nbsp;ME</a>
-                            <a class="btn btn-dark rounded" href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}"
-                                download="Dhaerieshan_Resume.pdf">DOWNLOAD&nbsp;RESUME</a>
+                            <a class="btn btn-dark rounded" href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}" download="Dhaerieshan_Resume.pdf">DOWNLOAD&nbsp;RESUME</a>
                         </div>
-
-                        <!-- FEATURED PROJECT BANNER -->
-                        <div class="featured-banner reveal-text">
-                            <span class="badge-label">🚀 Latest</span>
-                            <p class="banner-text">E-Commerce REST API &mdash; Spring Boot &bull; Docker &bull; PostgreSQL</p>
-                            <div class="banner-links">
-                                <a href="https://ecommerce-backend-ik3q.onrender.com" target="_blank" rel="noopener">Live API</a>
-                                <a href="https://github.com/dhaerieshan" target="_blank" rel="noopener">GitHub</a>
-                            </div>
-                        </div>
-
                         <div class="reveal-text">
                             <div class="socials mt-4">
                                 <div class="floating-wrapper">
@@ -88,7 +101,6 @@
                 </div>
             </div>
         </div>
-
         <div class="widget">
             <div class="widget-item">
                 <h2 class="counter" data-target="12">0</h2>
@@ -99,46 +111,83 @@
                 <p>Projects Completed</p>
             </div>
             <div class="widget-item">
-                <h2 class="counter" data-target="5">0</h2>
+                <h2 class="counter" data-target="6">0</h2>
                 <p>Certifications</p>
             </div>
         </div>
-
         <div class="scroll-down-arrow">
             <div class="arrow"></div>
         </div>
     </header>
+    <!--End of Page Header -->
 
-    <!-- ══════════════════════════════════════
-         ABOUT
-    ══════════════════════════════════════ -->
+    <!-- About section -->
     <section id="about" class="section mt-3">
         <div class="container mt-5">
-            <div class="row text-center text-md-left">
+            <div class="row text-center text-md-left about-desktop">
                 <div class="col-md-3">
                     <img src="{% static 'assets/imgs/profile.jpeg' %}" alt="" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title">Dhaerieshan M</h6>
                     <p class="subtitle">Associate Software Engineer</p>
-                    <p>I build AI/ML solutions with Python and full-stack backend systems with Java Spring Boot, all containerised with Docker and deployed on cloud platforms. My expertise spans predictive model development, REST API design, DevOps practices, and data-driven business intelligence. For educational details and experience, download my resume.</p>
-                    <a class="btn btn-primary rounded mt-3"
-                        href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}" download="Resume.pdf">DOWNLOAD RESUME</a>
+                    <p>I offer AI and ML solutions with Python, leveraging advanced algorithms to create efficient and
+                        innovative solutions tailored to meet your specific needs. My expertise includes developing
+                        predictive models, automating processes, and enhancing business intelligence through data-driven
+                        insights. For educational details and experience, you can download my resume.</p>
+                    <a class="btn btn-primary rounded mt-3" href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}" download="Resume.pdf">DOWNLOAD RESUME</a>
                 </div>
+            </div>
+            <!-- Mobile: square photo + name -->
+            <div class="about-mobile">
+                <div class="about-mobile-top">
+                    <img src="{% static 'assets/imgs/profile.jpeg' %}" alt="Dhaerieshan M" class="about-mobile-img">
+                    <div class="about-mobile-meta">
+                        <h6 class="title mb-1">Dhaerieshan M</h6>
+                        <p class="subtitle mb-0">Associate Software Engineer</p>
+                    </div>
+                </div>
+                <p class="mt-3">I build AI/ML solutions with Python and full-stack backend systems with Java Spring Boot, all containerised with Docker and deployed on cloud platforms. My expertise spans predictive model development, REST API design, DevOps practices, and data-driven business intelligence.</p>
+                <a class="btn btn-primary rounded mt-3" href="{% static 'assets/files/Dhaerieshan_Resume.pdf' %}" download="Resume.pdf">DOWNLOAD RESUME</a>
             </div>
         </div>
     </section>
+    <!-- End of About Section -->
 
-    <!-- ══════════════════════════════════════
-         SERVICE
-    ══════════════════════════════════════ -->
+    <!-- Service section -->
     <section id="service" class="section">
         <div class="container text-center">
             <h6 class="subtitle">Service</h6>
             <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">From AI model development to backend APIs, DevOps pipelines, and cloud deployments — here's what I bring to the table:</p>
-
-            <div class="row">
+            <p class="mb-5 pb-4">I specialize in providing cutting-edge AI and ML solutions using Python. Here are some of the services I offer:</p>
+            <div class="row svc-desktop">
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
+                        <div class="card-body d-flex flex-column">
+                            <i class="icon ti-server"></i>
+                            <h5>Backend Development</h5>
+                            <p>REST APIs with Java Spring Boot, PostgreSQL &amp; Docker.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
+                        <div class="card-body d-flex flex-column">
+                            <i class="icon ti-settings"></i>
+                            <h5>DevOps</h5>
+                            <p>CI/CD with Jenkins, Docker, AWS &amp; Render deployments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 mb-4">
+                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
+                        <div class="card-body d-flex flex-column">
+                            <i class="icon ti-world"></i>
+                            <h5>Web Development</h5>
+                            <p>Custom responsive web solutions for your business.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border overlay-link service-box" data-target="#contact">
                         <div class="card-body d-flex flex-column">
@@ -148,284 +197,381 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
-                        <div class="card-body d-flex flex-column">
-                            <i class="icon ti-server"></i>
-                            <h5>Backend Development</h5>
-                            <p>REST API design and development with Java Spring Boot, PostgreSQL, and Docker — production-ready and cloud-deployed.</p>
-                        </div>
-                    </div>
+            </div>
+            <!-- Mobile: vertical list (matches desktop) -->
+            <div class="svc-mobile">
+                <div class="svc-list-card" onclick="location.href='#contact'">
+                    <div class="svc-list-icon"><i class="ti-server"></i></div>
+                    <div class="svc-list-text"><div class="svc-list-name">Backend Development</div><div class="svc-list-desc">REST APIs with Java Spring Boot, PostgreSQL &amp; Docker.</div></div>
                 </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
-                        <div class="card-body d-flex flex-column">
-                            <i class="icon ti-settings"></i>
-                            <h5>DevOps</h5>
-                            <p>CI/CD pipeline setup with Jenkins, containerisation with Docker, and cloud deployments on AWS and Render.</p>
-                        </div>
-                    </div>
+                <div class="svc-list-card" onclick="location.href='#contact'">
+                    <div class="svc-list-icon"><i class="ti-settings"></i></div>
+                    <div class="svc-list-text"><div class="svc-list-name">DevOps</div><div class="svc-list-desc">CI/CD with Jenkins, Docker, AWS &amp; Render deployments.</div></div>
                 </div>
-                <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border overlay-link service-box" data-target="#contact">
-                        <div class="card-body d-flex flex-column">
-                            <i class="icon ti-world"></i>
-                            <h5>Web Development</h5>
-                            <p>Custom web solutions tailored for your business needs, focusing on responsive design and user experience.</p>
-                        </div>
-                    </div>
+                <div class="svc-list-card" onclick="location.href='#contact'">
+                    <div class="svc-list-icon"><i class="ti-world"></i></div>
+                    <div class="svc-list-text"><div class="svc-list-name">Web Development</div><div class="svc-list-desc">Custom responsive web solutions for your business.</div></div>
+                </div>
+                <div class="svc-list-card" onclick="location.href='#contact'">
+                    <div class="svc-list-icon"><i class="ti-crown"></i></div>
+                    <div class="svc-list-text"><div class="svc-list-name">AI Model Development</div><div class="svc-list-desc">Building and deploying AI models to solve complex problems and automate tasks.</div></div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- End of Service Section -->
 
-    <!-- ══════════════════════════════════════
-         SKILLS
-    ══════════════════════════════════════ -->
+    <!-- Skills section -->
     <section id="skills" class="section">
         <div class="container text-center">
             <h6 class="subtitle">Skills</h6>
             <h6 class="section-title mb-4">Why Choose Me</h6>
-            <p class="mb-5 pb-4">A strong background in AI/ML, backend engineering, DevOps, and cloud — here are the key areas of my expertise:</p>
-            <div class="row text-left">
+            <p class="mb-5 pb-4">With a strong background in AI and ML, I bring a wealth of knowledge and skills to your projects. Here are some key areas of my expertise:</p>
 
-                <div class="col-sm-6 skill-container">
-                    <h6 class="mb-3">Python &amp; AI/ML</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="95" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Python Programming</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Numpy &amp; Pandas</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="88" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Computer Vision</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Random Forest</span></div></div>
-                </div>
-
-                <div class="col-sm-6 skill-container">
-                    <h6 class="mb-3">Generative AI</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="94" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">GPT-4</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Llama 3</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="91" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Mistral</span></div></div>
-                </div>
-
+            <!-- ===== DESKTOP: progress bars (same skills as mobile) ===== -->
+            <div class="row text-left skill-desktop">
                 <div class="col-sm-6 skill-container">
                     <h6 class="mb-3">Java Backend</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Java</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Spring Boot</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">REST API Design</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="79" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">PostgreSQL</span></div></div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Java</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Spring Boot</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">REST API Design</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="79" aria-valuenow="79" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">PostgreSQL</span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-sm-6 skill-container">
-                    <h6 class="mb-3">Python Web Frameworks</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="81" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Django</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Flask</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Streamlit</span></div></div>
-                </div>
-
                 <div class="col-sm-6 skill-container">
                     <h6 class="mb-3">DevOps &amp; CI/CD</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="85" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Docker &amp; Docker Compose</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Jenkins CI/CD</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Linux &amp; Bash</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="72" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Git &amp; GitHub</span></div></div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="85" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Docker &amp; Docker Compose</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Jenkins CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Linux &amp; Bash</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="72" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Git &amp; GitHub</span>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="col-sm-6 skill-container">
                     <h6 class="mb-3">Cloud</h6>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="74" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">AWS (EC2, ECS, S3)</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Render</span></div></div>
-                    <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="70" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span class="skill-text">Cloud Deployment</span></div></div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="74" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">AWS (EC2, ECS, S3)</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Render</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="70" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Cloud Deployment</span>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Python Web Frameworks</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="81" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Django</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Flask</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="78" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Python &amp; AI/ML</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="95" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Python Programming</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Numpy &amp; Pandas</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="88" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Random Forest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 skill-container">
+                    <h6 class="mb-3">Generative AI</h6>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="94" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">GPT-4</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="82" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Llama 3</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary percentage" role="progressbar" data-width="91" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill-text">Mistral</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- ===== MOBILE: accordion (unchanged) ===== -->
+            <div class="skill-mobile">
+                <div class="acc-item">
+                    <div class="acc-header open"><span>Java Backend</span><span class="acc-arrow">▲</span></div>
+                    <div class="acc-body">
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80"><span class="skill-text">Java</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78"><span class="skill-text">Spring Boot</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82"><span class="skill-text">REST API Design</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="79"><span class="skill-text">PostgreSQL</span></div></div>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <div class="acc-header"><span>DevOps &amp; CI/CD</span><span class="acc-arrow">▼</span></div>
+                    <div class="acc-body" >
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="85"><span class="skill-text">Docker &amp; Docker Compose</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80"><span class="skill-text">Jenkins CI/CD</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="75"><span class="skill-text">Linux &amp; Bash</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="72"><span class="skill-text">Git &amp; GitHub</span></div></div>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <div class="acc-header"><span>Cloud</span><span class="acc-arrow">▼</span></div>
+                    <div class="acc-body" >
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="74"><span class="skill-text">AWS (EC2, ECS, S3)</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78"><span class="skill-text">Render</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="70"><span class="skill-text">Cloud Deployment</span></div></div>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <div class="acc-header"><span>Python Web Frameworks</span><span class="acc-arrow">▼</span></div>
+                    <div class="acc-body" >
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="81"><span class="skill-text">Django</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="75"><span class="skill-text">Flask</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="78"><span class="skill-text">Streamlit</span></div></div>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <div class="acc-header"><span>Python &amp; AI/ML</span><span class="acc-arrow">▼</span></div>
+                    <div class="acc-body" >
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="95"><span class="skill-text">Python Programming</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82"><span class="skill-text">Numpy &amp; Pandas</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="88"><span class="skill-text">Computer Vision</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="80"><span class="skill-text">Random Forest</span></div></div>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <div class="acc-header"><span>Generative AI</span><span class="acc-arrow">▼</span></div>
+                    <div class="acc-body" >
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="94"><span class="skill-text">GPT-4</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="82"><span class="skill-text">Llama 3</span></div></div>
+                        <div class="progress"><div class="progress-bar bg-primary percentage" role="progressbar" data-width="91"><span class="skill-text">Mistral</span></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- End of Skills Section -->
 
-    <!-- ══════════════════════════════════════
-         PORTFOLIO
-    ══════════════════════════════════════ -->
+    <!-- Portfolio section -->
     <section id="portfolio" class="section">
         <div class="container text-center">
             <h6 class="subtitle">Portfolio</h6>
             <h6 class="section-title mb-4">Check My Wonderful Works</h6>
             <p class="mb-5 pb-4">Here are some of the projects I've worked on:</p>
 
-            <div class="row">
-
-                <!-- E-COMMERCE DEVOPS PROJECT -->
+            <div class="row port-desktop">
+                <!-- 1. E-Commerce REST API -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper devops-card">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">E-Commerce REST API</h5>
                         <img src="{% static 'assets/imgs/ecommerce-api.svg' %}" alt="E-Commerce REST API" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Production REST API — Spring Boot, Docker, PostgreSQL, deployed on Render.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="7" data-description="
-                                <h5>E-Commerce REST API</h5><br>
-                                <p><strong>Purpose:</strong><br>A fully functional e-commerce backend REST API built as a DevOps portfolio project, demonstrating end-to-end deployment from development to production.</p>
-                                <p><strong>Technologies used:</strong>
-                                    <ul>
-                                        <li>Java Spring Boot (REST API)</li>
-                                        <li>PostgreSQL (Database)</li>
-                                        <li>Docker &amp; Docker Compose</li>
-                                        <li>Render (Cloud Deployment)</li>
-                                        <li>JWT Authentication</li>
-                                        <li>Jenkins CI/CD (pipeline experience)</li>
-                                    </ul>
-                                </p>
-                                <p><strong>Key features:</strong>
-                                    <ul>
-                                        <li>Role-based access control (Admin, Vendor, User)</li>
-                                        <li>Product catalogue, cart, orders &amp; wishlist APIs</li>
-                                        <li>Containerised with Docker, orchestrated with Compose</li>
-                                        <li>Deployed live on Render cloud platform</li>
-                                        <li>Swagger API documentation</li>
-                                    </ul>
-                                </p>
-                                <p><strong>Outcomes:</strong>
-                                    <ul>
-                                        <li>Live production deployment accessible 24/7</li>
-                                        <li>Demonstrates full DevOps lifecycle: code → container → cloud</li>
-                                        <li>Clean separation of concerns across 30+ REST endpoints</li>
-                                    </ul>
-                                </p>
-                                "><i class="ti-zoom-in"></i></a>
-                                    <a href="https://ecommerce-backend-ik3q.onrender.com" class="link-btn" target="_blank"><i class="ti-link"></i></a>
-
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="7" data-description="<h5>E-Commerce REST API</h5><br><p><strong>Purpose:</strong> A fully functional e-commerce backend REST API demonstrating end-to-end deployment from development to production.</p><p><strong>Technologies:</strong> Java Spring Boot, PostgreSQL, Docker &amp; Docker Compose, Render, JWT Authentication, Jenkins CI/CD</p><p><strong>Key features:</strong> Role-based access control (Admin, Vendor, User), product catalogue, cart, orders &amp; wishlist APIs, containerised with Docker, deployed live on Render, Swagger API documentation.</p><p><strong>Outcomes:</strong> Live production deployment accessible 24/7, demonstrates full DevOps lifecycle: code → container → cloud.</p>"><i class="ti-zoom-in"></i></a>
+                                <a href="https://ecommerce-backend-ik3q.onrender.com" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Gen AI Interviewer -->
+                <!-- 2. Gen AI Interviewer -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Gen AI-based AI Interviewer</h5>
                         <img src="{% static 'assets/imgs/gen-ai-interviewer.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>AI interviewer using generative AI.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="1" data-description="
-                                <h5>Gen AI-based AI Interviewer</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To develop an AI interviewer using generative AI techniques to conduct and assess interviews.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Generative AI</li><li>Natural Language Processing (NLP)</li><li>Python</li><li>Machine Learning</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Automates the interview process by asking questions and assessing responses.</li><li>Uses generative AI to create and customize interview questions.</li><li>Provides feedback and scores based on the interviewee's responses.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Efficient and unbiased interview process.</li><li>Saves time for HR professionals by automating initial interview rounds.</li><li>Provides consistent and fair evaluation criteria.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="1" data-description="<h5>Gen AI-based AI Interviewer</h5><br><p><strong>Purpose:</strong> Develop an AI interviewer using generative AI to conduct and assess interviews.</p><p><strong>Technologies:</strong> Generative AI, NLP, Python, Machine Learning, Streamlit</p><p><strong>Key features:</strong> Automates interview process, generates custom questions, provides feedback and scores.</p><p><strong>Outcomes:</strong> Efficient unbiased interviews, saves HR time, consistent evaluation criteria.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Ai_mock_interviewer" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Customer Care Call Summary -->
+                <!-- 3. Customer Care Call Summary -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Customer Care Call Summary Alert</h5>
                         <img src="{% static 'assets/imgs/customer-care-call-summary.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Summarize customer care calls and provide alerts.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="2" data-description="
-                                <h5>Customer Care Call Summary Alert</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To develop a system that summarizes customer care calls and provides alerts using NLP and machine learning.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Natural Language Processing (NLP)</li><li>Machine Learning</li><li>Python</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Captures user input and creates embeddings for analysis.</li><li>Uses Pinecone for storing and retrieving embeddings.</li><li>Classifies customer care calls into relevant categories.</li><li>Summarizes the content of the calls and provides alerts.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Streamlined customer care process with quick summaries.</li><li>Improved customer service by prioritizing urgent issues.</li><li>Efficient management of large volumes of calls.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="2" data-description="<h5>Customer Care Call Summary Alert</h5><br><p><strong>Purpose:</strong> Summarize customer care calls and provide alerts using NLP and machine learning.</p><p><strong>Technologies:</strong> NLP, Machine Learning, Python, Streamlit, Pinecone</p><p><strong>Key features:</strong> Creates embeddings, classifies calls, summarizes content, sends alerts.</p><p><strong>Outcomes:</strong> Streamlined process, improved service, efficient handling of large volumes.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Customer_Care_Call_Summarizer_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Support Chat Bot -->
+                <!-- 4. Support Chatbot -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Support Chat Bot for Your Website</h5>
                         <img src="{% static 'assets/imgs/support-chat-bot.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Provide support on websites.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="5" data-description="
-                                <h5>Support Chat Bot for Your Website</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To create a chatbot that provides support on websites, leveraging conversational AI and user interaction.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Conversational AI</li><li>Natural Language Processing (NLP)</li><li>Python</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Captures user queries and provides relevant responses.</li><li>Uses NLP models to understand and respond to user inputs.</li><li>Can be integrated into any website for customer support.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Enhanced customer support experience.</li><li>24/7 availability of support through the chatbot.</li><li>Reduced workload for customer support teams.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="5" data-description="<h5>Support Chat Bot for Your Website</h5><br><p><strong>Purpose:</strong> Create a chatbot for website support using conversational AI.</p><p><strong>Technologies:</strong> Conversational AI, NLP, Python, Streamlit</p><p><strong>Key features:</strong> Understands user queries, provides relevant responses, integrates into any website.</p><p><strong>Outcomes:</strong> Enhanced support experience, 24/7 availability, reduced workload for teams.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Website_Support_Chatbot" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Youtube Script Writing -->
+                <!-- 5. YouTube Script Tool -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Youtube Script Writing Tool</h5>
                         <img src="{% static 'assets/imgs/youtube-script-writing.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Assist in writing scripts for YouTube videos.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="4" data-description="
-                                <h5>Youtube Script Writing Tool</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To develop a tool that assists in writing scripts for YouTube videos using NLP.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Natural Language Processing (NLP)</li><li>Machine Learning</li><li>Python</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Captures user input for video ideas and topics.</li><li>Generates script outlines and detailed scripts.</li><li>Uses NLP models to ensure coherent and engaging content.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Streamlined scriptwriting process for YouTube creators.</li><li>High-quality and engaging video scripts.</li><li>Saves time and effort in scriptwriting.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="4" data-description="<h5>Youtube Script Writing Tool</h5><br><p><strong>Purpose:</strong> Assist in writing YouTube video scripts using NLP.</p><p><strong>Technologies:</strong> NLP, Machine Learning, Python, Streamlit</p><p><strong>Key features:</strong> Captures video ideas, generates outlines and full scripts, ensures engaging content.</p><p><strong>Outcomes:</strong> Streamlined scriptwriting, high-quality content, saves time and effort.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Youtube_Script_Writer" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Automatic Ticket Classification -->
+                <!-- 6. Ticket Classification -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Automatic Ticket Classification Tool</h5>
                         <img src="{% static 'assets/imgs/auto-ticket-classification.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Automatically classify support tickets.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="3" data-description="
-                                <h5>Automatic Ticket Classification Tool</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To create a tool that automatically classifies support tickets using ML algorithms.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Machine Learning</li><li>Natural Language Processing (NLP)</li><li>Python</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Captures user queries and creates embeddings for classification.</li><li>Uses Pinecone for storing and retrieving embeddings.</li><li>Predicts the department to which the ticket should be submitted.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Automated classification of support tickets.</li><li>Reduced response time for support teams.</li><li>Efficient handling and routing of support queries.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="3" data-description="<h5>Automatic Ticket Classification Tool</h5><br><p><strong>Purpose:</strong> Automatically classify support tickets using machine learning.</p><p><strong>Technologies:</strong> Machine Learning, NLP, Python, Streamlit, Pinecone</p><p><strong>Key features:</strong> Classifies tickets with embeddings, predicts the right department, provides feedback.</p><p><strong>Outcomes:</strong> Automated classification, reduced response time, efficient routing.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Automatic_Ticket_Clasification_Tool" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Resume Screening -->
+                <!-- 7. Resume Screening -->
                 <div class="col-sm-6 col-md-4 mb-4">
                     <div class="img-wrapper">
-                        <h5 class="project-title"></h5>
-                        <h5 class="project-title"></h5>
+                        <h5 class="project-title">Resume Screening Assistance</h5>
                         <img src="{% static 'assets/imgs/resume-screening-assistance.svg' %}" alt="" class="img-fluid">
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <p>Assist in screening resumes.</p>
-                                <a href="javascript:void(0)" class="zoom-btn" data-modal="6" data-description="
-                                <h5>Resume Screening Assistance Project</h5><br>
-                                <p><strong>Purpose of the project:</strong><ul>To develop a tool that assists in screening resumes using NLP and ML techniques.</ul></p>
-                                <p><strong>Technologies used:</strong><ul><li>Natural Language Processing (NLP)</li><li>Machine Learning</li><li>Python</li><li>Streamlit for the interface</li></ul></p>
-                                <p><strong>Key features:</strong><ul><li>Allows HR professionals to upload job descriptions and resumes.</li><li>Uses embeddings to match resumes to job descriptions.</li><li>Summarizes relevant resumes and provides match scores.</li></ul></p>
-                                <p><strong>Outcomes or results:</strong><ul><li>Efficient and accurate screening of resumes.</li><li>Saves time for HR professionals by automating initial screening.</li><li>Provides detailed summaries and match scores.</li></ul></p>
-                                "><i class="ti-zoom-in"></i></a>
+                                <a href="javascript:void(0)" class="zoom-btn" data-modal="6" data-description="<h5>Resume Screening Assistance</h5><br><p><strong>Purpose:</strong> Screen resumes using NLP and machine learning.</p><p><strong>Technologies:</strong> NLP, Machine Learning, Python, Streamlit</p><p><strong>Key features:</strong> Upload job descriptions and resumes, match with embeddings, provide summaries and scores.</p><p><strong>Outcomes:</strong> Efficient accurate screening, saves HR time, detailed match scores.</p>"><i class="ti-zoom-in"></i></a>
                                 <a href="https://github.com/dhaerieshan/Resume_Screening_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- 8. Coming Soon -->
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Coming Soon</h5>
+                        <img src="{% static 'assets/imgs/coming-soon.svg' %}" alt="Coming Soon" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>New project coming soon. Stay tuned!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9. Coming Soon -->
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="img-wrapper">
+                        <h5 class="project-title">Coming Soon</h5>
+                        <img src="{% static 'assets/imgs/coming-soon.svg' %}" alt="Coming Soon" class="img-fluid">
+                        <div class="overlay">
+                            <div class="overlay-infos">
+                                <p>New project coming soon. Stay tuned!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Mobile: 2x2 swipe carousel -->
+            <div class="port-mobile">
+                <div class="port-track" id="portTrack">
+                    <div class="port-page"><div class="port-grid">
+                        <div class="port-card"><div class="img-wrapper devops-card" style="margin-bottom:0"><img src="{% static 'assets/imgs/ecommerce-api.svg' %}" alt="E-Commerce REST API"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="7" data-description="<h5>E-Commerce REST API</h5><p>Spring Boot · Docker · PostgreSQL · Render</p>"><i class="ti-zoom-in"></i></a><a href="https://ecommerce-backend-ik3q.onrender.com" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">E-Commerce REST API</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/gen-ai-interviewer.svg' %}" alt="Gen AI Interviewer"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="1" data-description="<h5>Gen AI Interviewer</h5><p>Python · GPT-4 · NLP · Streamlit</p>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Ai_mock_interviewer" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">Gen AI Interviewer</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/customer-care-call-summary.svg' %}" alt="Call Summary"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="2" data-description="<h5>Customer Care Call Summary</h5>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Customer_Care_Call_Summarizer_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">Call Summary Alert</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/support-chat-bot.svg' %}" alt="Support Chatbot"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="5" data-description="<h5>Support Chat Bot</h5>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Website_Support_Chatbot" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">Support Chatbot</p></div>
+                    </div></div>
+                    <div class="port-page"><div class="port-grid">
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/youtube-script-writing.svg' %}" alt="YouTube Script"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="4" data-description="<h5>YouTube Script Tool</h5>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Youtube_Script_Writer" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">YouTube Script Tool</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/auto-ticket-classification.svg' %}" alt="Ticket Classifier"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="3" data-description="<h5>Auto Ticket Classification</h5>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Automatic_Ticket_Clasification_Tool" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">Ticket Classifier</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/resume-screening-assistance.svg' %}" alt="Resume Screening"><div class="overlay"><div class="overlay-infos"><a href="javascript:void(0)" class="zoom-btn" data-modal="6" data-description="<h5>Resume Screening</h5>"><i class="ti-zoom-in"></i></a><a href="https://github.com/dhaerieshan/Resume_Screening_AI" class="link-btn" target="_blank"><i class="ti-link"></i></a></div></div></div><p class="port-label">Resume Screening</p></div>
+                        <div class="port-card"><div class="img-wrapper" style="margin-bottom:0"><img src="{% static 'assets/imgs/coming-soon.svg' %}" alt="Coming Soon"><div class="overlay"><div class="overlay-infos"><p>Coming Soon</p></div></div></div><p class="port-label">Coming Soon</p></div>
+                    </div></div>
+                </div>
+                <div class="port-dots">
+                    <button class="port-dot active" onclick="portGoTo(0)"></button>
+                    <button class="port-dot" onclick="portGoTo(1)"></button>
+                </div>
+                <p class="port-hint">← swipe to see more →</p>
             </div>
         </div>
     </section>
+    <!-- End of Portfolio section -->
 
-    <!-- Modals -->
+    <!-- Modal Structure -->
     <div id="modal1" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><div class="modal-description"></div></div></div>
     <div id="modal2" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><div class="modal-description"></div></div></div>
     <div id="modal3" class="modal"><div class="modal-content"><span class="close-btn">&times;</span><div class="modal-description"></div></div></div>
@@ -438,7 +584,6 @@
         document.addEventListener('DOMContentLoaded', function () {
             var modals = document.querySelectorAll('.modal');
             var closeBtns = document.querySelectorAll('.close-btn');
-
             document.querySelectorAll('.zoom-btn').forEach(button => {
                 button.addEventListener('click', function () {
                     const modalId = `modal${this.dataset.modal}`;
@@ -447,13 +592,11 @@
                     document.getElementById(modalId).style.display = "block";
                 });
             });
-
             closeBtns.forEach(btn => {
                 btn.addEventListener('click', function () {
                     this.closest('.modal').style.display = "none";
                 });
             });
-
             window.onclick = function (event) {
                 modals.forEach(modal => {
                     if (event.target === modal) modal.style.display = "none";
@@ -462,9 +605,7 @@
         });
     </script>
 
-    <!-- ══════════════════════════════════════
-         CONTACT
-    ══════════════════════════════════════ -->
+    <!-- Contact Section -->
     <section id="contact" class="position-relative section">
         <div class="container text-center" style="position: relative; z-index: 2;">
             <div class="contact text-left">
@@ -497,34 +638,26 @@
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
+    <!-- End of Contact Section -->
 
-    <!-- Footer -->
+    <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy;
-                        <a href="https://github.com/dhaerieshan" target="_blank">Dhaerieshan M</a>
-                    </p>
+                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="https://github.com/dhaerieshan" target="_blank">Dhaerieshan M</a></p>
                 </div>
                 <div class="col-sm-6">
                     <div class="socials mt-4">
-                        <div class="floating-wrapper">
-                            <a class="social-item" href="https://linkedin.com/in/dhaerie-shan-38939a187"><i class="ti-linkedin"></i></a>
-                        </div>
-                        <div class="floating-wrapper">
-                            <a class="social-item" href="https://www.instagram.com/dhaerie_shan/" target="_blank"><i class="ti-instagram"></i></a>
-                        </div>
-                        <div class="floating-wrapper">
-                            <a class="social-item" href="https://github.com/dhaerieshan" target="_blank"><i class="ti-github"></i></a>
-                        </div>
+                        <a class="social-item" href="https://linkedin.com/in/dhaerie-shan-38939a187"><i class="ti-linkedin"></i></a>
+                        <a class="social-item" href="https://www.instagram.com/dhaerie_shan/" target="_blank"><i class="ti-instagram"></i></a>
+                        <a class="social-item" href="https://github.com/dhaerieshan" target="_blank"><i class="ti-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -532,5 +665,54 @@
     <script src="{% static 'assets/vendors/bootstrap/bootstrap.affix.js' %}"></script>
     <script src="{% static 'assets/js/script.js' %}"></script>
 
+    <script>
+    // Apply progress bar widths from data-width attribute
+    function applyProgressBars(container) {
+        (container || document).querySelectorAll('.percentage[data-width]').forEach(function(bar) {
+            bar.style.width = bar.getAttribute('data-width') + '%';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Apply all bars immediately on load (desktop + first open mobile accordion)
+        applyProgressBars();
+
+        document.querySelectorAll('.acc-item').forEach(function(item) {
+            var header = item.querySelector('.acc-header');
+            var body   = item.querySelector('.acc-body');
+            var arrow  = item.querySelector('.acc-arrow');
+            header.addEventListener('click', function() {
+                var isOpen = body.style.display !== 'none';
+                document.querySelectorAll('.skill-mobile .acc-body').forEach(function(b){ b.style.display='none'; });
+                document.querySelectorAll('.skill-mobile .acc-arrow').forEach(function(a){ a.textContent='▼'; });
+                if (!isOpen) {
+                    body.style.display = 'block';
+                    arrow.textContent = '▲';
+                    // Re-apply widths now that bars are visible
+                    applyProgressBars(body);
+                }
+            });
+        });
+        var cur=0, tot=2;
+        window.portGoTo = function(p) {
+            cur = p;
+            var t = document.getElementById('portTrack');
+            if (t) t.style.transform = 'translateX(-'+(p*100)+'%)';
+            document.querySelectorAll('.port-dot').forEach(function(d,i){ d.classList.toggle('active', i===p); });
+        };
+        var t = document.getElementById('portTrack');
+        if (t) {
+            var sx=0, sy=0;
+            t.addEventListener('touchstart', function(e){ sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, {passive:true});
+            t.addEventListener('touchend', function(e){
+                var dx=sx-e.changedTouches[0].clientX, dy=sy-e.changedTouches[0].clientY;
+                if (Math.abs(dx)>Math.abs(dy) && Math.abs(dx)>40) {
+                    if (dx>0 && cur<tot-1) portGoTo(cur+1);
+                    if (dx<0 && cur>0)     portGoTo(cur-1);
+                }
+            }, {passive:true});
+        }
+    });
+    </script>
 </body>
 </html>
