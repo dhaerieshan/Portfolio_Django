@@ -1,0 +1,257 @@
+/* ================================
+   ROOT VARIABLES
+   ================================ */
+:root {
+    --bg-main: #020617;
+    --bg-secondary: #020617;
+    --bg-card: #020617;
+    --border-color: #1e293b;
+
+    --text-main: #e5e7eb;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+}
+
+/* ================================
+   GLOBAL RESET
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   PARTICLES BACKGROUND
+   ================================ */
+#particles-js {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--bg-main);
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+.navbar {
+    background: rgba(2, 6, 23, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+    color: var(--text-main) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* ================================
+   SECTIONS
+   ================================ */
+section {
+    padding: 80px 0;
+    background-color: var(--bg-main);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ================================
+   HERO / HOME
+   ================================ */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+.btn {
+    border-radius: 6px;
+    padding: 10px 22px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #020617;
+}
+
+.btn-outline-light {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--text-main);
+    color: var(--bg-main);
+}
+
+/* ================================
+   CARDS (Services / Skills / Portfolio)
+   ================================ */
+.card,
+.service-box,
+.skill-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.service-box:hover,
+.skill-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(56, 189, 248, 0.15);
+}
+
+.card h5 {
+    margin-bottom: 10px;
+}
+
+/* ================================
+   SKILLS / PROGRESS
+   ================================ */
+.progress {
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--accent);
+}
+
+/* ================================
+   PORTFOLIO
+   ================================ */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* ================================
+   FORMS
+   ================================ */
+.form-control,
+textarea {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus,
+textarea:focus {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-color: var(--accent);
+    box-shadow: none;
+}
+
+::placeholder {
+    color: var(--text-muted);
+}
+
+/* ================================
+   MODAL
+   ================================ */
+.modal-content {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer,
+.page-footer {
+    background-color: var(--bg-main);
+    border-top: 1px solid var(--border-color);
+    padding: 30px 0;
+}
+
+footer p {
+    color: var(--text-muted);
+}
+
+/* ================================
+   SOCIAL ICONS
+   ================================ */
+.social-item i {
+    font-size: 20px;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.social-item:hover i {
+    color: var(--accent);
+}
+
+/* ================================
+   UTILITIES
+   ================================ */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+a {
+    text-decoration: none;
+}

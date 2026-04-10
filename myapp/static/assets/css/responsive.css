@@ -1,0 +1,150 @@
+/* responsive.css - small overrides for orientation and button sizing */
+
+/* Ensure images scale */
+img, .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar brand image sizing to prevent overflow in landscape */
+.navbar-brand img {
+  max-height: 48px;
+  height: auto;
+  width: auto;
+}
+
+/* Utility button class to enforce minimum touch target and consistent sizing */
+.btn {
+  /* Use rem so it's responsive to user font-size settings */
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  min-height: 2.75rem; /* ~44px recommended minimum touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons container: allow wrapping on small screens and spacing */
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.buttons .btn {
+  margin: 0.15rem 0;
+}
+
+/* Ensure .w-lg has a sensible default (used in templates) */
+.w-lg {
+  width: auto;
+  display: inline-block;
+}
+
+/* Back button specific adjustments to unify with .btn rules */
+.back-button {
+  padding: 0.6rem 1rem !important;
+  min-height: 2.75rem !important;
+  font-size: 1rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Larger button modifier */
+.btn--lg, .btn-lg {
+  padding: 0.8rem 1.25rem;
+  font-size: 1.0625rem;
+  min-height: 3rem;
+}
+
+/* Ensure full-width on small screens where appropriate */
+@media (max-width: 575.98px) {
+  .btn-block, .w-lg {
+    width: 100% !important;
+  }
+  .navbar .nav-link {
+    padding: 0.5rem 0.75rem;
+  }
+  .buttons {
+    justify-content: center;
+  }
+}
+
+/* Orientation-specific tweaks */
+@media (orientation: portrait) {
+  /* Increase spacing and font sizes in portrait for readability */
+  header.hero, .hero, .header {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+  .btn {
+    padding: 0.75rem 1rem;
+    min-height: 3rem;
+    font-size: 1.05rem;
+  }
+  .back-button {
+    padding: 0.75rem 1rem !important;
+    min-height: 3rem !important;
+    font-size: 1.05rem !important;
+  }
+}
+
+@media (orientation: landscape) {
+  /* Tighter vertical spacing in landscape to make use of width */
+  header.hero, .hero, .header {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  .navbar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+/* Breakpoints: mobile-first responsive adjustments */
+@media (min-width: 576px) {
+  .btn {
+    padding: 0.6rem 1.1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.975rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Focus visible for accessibility */
+.btn:focus, button:focus, a.btn:focus {
+  outline: 3px solid rgba(0,123,255,0.25);
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal overflow on small devices */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Keep container images and galleries responsive */
+.portfolio-item img, .work img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Map iframe sizing: let it be responsive and not exceed viewport height on small screens */
+#map iframe {
+  width: 100%;
+  min-height: 200px;
+  max-height: 60vh;
+}

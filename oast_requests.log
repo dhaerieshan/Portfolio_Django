@@ -1,0 +1,2 @@
+{"timestamp": "2026-04-10T18:21:10.904427", "remote_ip": "127.0.0.1", "method": "GET", "path": "/oast-log/", "full_path": "/oast-log/", "query_params": {}, "headers": {"COOKIE": ""}, "content_type": null, "body": null, "cookies": {}}
+{"timestamp": "2026-04-10T18:21:10.905291", "remote_ip": "127.0.0.1", "method": "GET", "path": "/oast-log/test.png", "full_path": "/oast-log/test.png", "query_params": {}, "headers": {"COOKIE": ""}, "content_type": null, "body": null, "cookies": {}}
