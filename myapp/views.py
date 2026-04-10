@@ -180,6 +180,17 @@ def oast_dashboard(request):
     # Reverse to show newest first
     requests_list.reverse()
 
+    # Build request cards HTML
+    requests_html = "".join([f'''
+        <div class="request">
+            <div class="timestamp">{req['timestamp']}</div>
+            <div class="ip">IP: {req['remote_ip']}</div>
+            <div class="method">METHOD: {req['method']}</div>
+            <div class="path">PATH: {req['path']}</div>
+            <div class="json"><pre>{json.dumps(req, indent=2)}</pre></div>
+        </div>
+        ''' for req in requests_list[:50]])
+
     html = f'''
     <!DOCTYPE html>
     <html>
@@ -223,15 +234,7 @@ def oast_dashboard(request):
 
         <h2>Recent Requests:</h2>
 
-        {"".join([f'''
-        <div class="request">
-            <div class="timestamp">{req['timestamp']}</div>
-            <div class="ip">IP: {req['remote_ip']}</div>
-            <div class="method">METHOD: {req['method']}</div>
-            <div class="path">PATH: {req['path']}</div>
-            <div class="json"><pre>{json.dumps(req, indent=2)}</pre></div>
-        </div>
-        ''' for req in requests_list[:50]])}
+        {requests_html}
 
     </body>
     </html>
