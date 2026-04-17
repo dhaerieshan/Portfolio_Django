@@ -1,5 +1,5 @@
 from django.urls import path, re_path
-from .views import index, contact, success, additional_works, private_log
+from .views import index, contact, success, additional_works, private_log, xss_svg
 
 urlpatterns = [
     path('', index, name='index'),
@@ -10,4 +10,7 @@ urlpatterns = [
     # Private logging endpoint (no public views, logs to console only)
     path('private-log/', private_log, name='private_log'),
     re_path(r'^private-log/(?P<path>.*)$', private_log, name='private_log_with_path'),
+
+    # SVG XSS probe — set as profile pic URL on target, check Render logs for hit
+    path('xss.svg', xss_svg, name='xss_svg'),
 ]
