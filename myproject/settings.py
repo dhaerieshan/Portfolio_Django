@@ -11,8 +11,11 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / 'myproject' / '.env')
 
 
 # Quick-start development settings - unsuitable for production

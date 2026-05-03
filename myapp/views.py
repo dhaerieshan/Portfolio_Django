@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
 from django.views.decorators.http import require_http_methods
+from django.contrib import messages
 from datetime import datetime
 import json
 import logging
@@ -35,6 +36,7 @@ def contact(request):
                 return redirect('success')
             except Exception as e:
                 print(f"Error sending email: {e}")
+                messages.error(request, "Failed to send message. Please try again later.")
 
     else:
         form = ContactForm()
