@@ -10,6 +10,7 @@ import logging
 import urllib.parse
 
 from .forms import ContactForm
+from .models import Message
 
 logger = logging.getLogger(__name__)
 
@@ -24,19 +25,10 @@ def contact(request):
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
+            body = form.cleaned_data['message']
 
-            subject = f'Message from {name}'
-            message = f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
-            from_email = settings.EMAIL_HOST_USER
-            to_email = [settings.EMAIL_HOST_USER]
-
-            try:
-                send_mail(subject, message, from_email, to_email)
-                return redirect('success')
-            except Exception as e:
-                print(f"Error sending email: {e}")
-                messages.error(request, "Failed to send message. Please try again later.")
+            Message.objects.create(name=name, email=email, message=body)
+            return redirect('success')
 
     else:
         form = ContactForm()
